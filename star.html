@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="star" id="star">
+    <button onclick="Search()">Search</button>
+    <p id="output"></p>
+</body>
+</html>
+<script>
+    let star = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe","Regulus"];
+    let conste = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major","Leo"];
+    let input = document.getElementById("star").value;
+    function Search(input) {
+        let index_star = 0;
+        let result = "";
+        for (let i = 0; i< star.length;i++){
+            if (input == star[i]){
+                index_star = i;
+                for (let j= 0; j< conste.length; j++){
+                    if (index_star == j) {
+                        result == conste[j];
+                        return result;
+                    }
+                }
+            } else {
+                result = "Khong tim thay sao";
+                return result;
+            }
+        }
+    }
+    console.log (Search(star))
+</script>
