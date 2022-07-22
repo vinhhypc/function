@@ -13,18 +13,17 @@
 </body>
 </html>
 <script>
-    function Check(a) {
+    function Check() {
+        let a = document.getElementById("input").value;
+        let b = a.split("");
         let result = "";
-        if (Number.isInteger(a) && a>=0) {
-             result = "True";
-        } else if (Number.isInteger(a) && a<0) {
-             result = "False";
-        } else {
-             result = "Gia tri khong hop le";
+        for (let i = 0;i <b.length;i++) {
+            if (isNaN(b[i])) {
+                result = "False";
+            } else {
+                result = "True";
+            }
         }
-    return result;
-    }
-    let a = document.getElementById("input").value;
-    let result = Check(a);
     document.getElementById("display").innerHTML = result;
+    }
 </script>
