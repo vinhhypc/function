@@ -19,9 +19,13 @@
         let result = "";
         for (let i = 0;i <b.length;i++) {
             if (isNaN(b[i])) {
-                result = "False";
+                result = "Not a number";
             } else {
-                result = "True";
+                if (a > 0) {
+                    result = "True";
+                }else {
+                    result = "false";
+                }
             }
         }
     document.getElementById("display").innerHTML = result;

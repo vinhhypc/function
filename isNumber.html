@@ -14,12 +14,15 @@
 <script>
     function CheckNum() {
         let a = document.getElementById("input").value;
-        if (isNaN(a)){
-            return "true";
-        } else {
-            return "false"
+        let b = a.split("");
+        let result ="";
+        for (let i =0;i<b.length;i++){
+            if (isNaN(b[i])){
+                result = "false";
+            } else {
+                result =  "true"
+            }
         }
+        alert(result);
     }
-    let b = CheckNum();
-    document.write(b);
 </script>
