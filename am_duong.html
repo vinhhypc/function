@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input name="" id="input">
+    <button onclick="Check()">Check</button>
+    <p id="display"></p>
+</body>
+</html>
+<script>
+    function Check(a) {
+        let result = "";
+        if (Number.isInteger(a) && a>=0) {
+             result = "True";
+        } else if (Number.isInteger(a) && a<0) {
+             result = "False";
+        } else {
+             result = "Gia tri khong hop le";
+        }
+    return result;
+    }
+    let a = document.getElementById("input").value;
+    let result = Check(a);
+    document.getElementById("display").innerHTML = result;
+</script>

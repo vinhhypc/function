@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function findMin(arr) {
+        let resultMin = "";
+        if (arr.length == 0){
+            resultMin = 'Khong co phan tu !'
+        }else if (arr.length >0) {
+            resultMin = arr[0];
+            for (let i = 1; i < arr.length; i++) {
+            if (resultMin > arr[i]) {
+                resultMin = arr[i];
+            }
+        }
+        }
+    return  resultMin;
+    }
+    let arr = [12,23,5,7,8,13,65,5,-1,9,23];
+    let find = findMin(arr);
+    console.log(find);
+</script>

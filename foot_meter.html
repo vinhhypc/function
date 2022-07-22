@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <label for="foot">Foot to meter </label><br>
+        <input type="text" id="foots" placeholder="Enter foot" oninput="toMeter(this.value)" onchange="toMeter(this.value)">
+        <p id="ftom"></p>
+        <label for="meter">Meter to foot </label><br>
+        <input type="text" id="meters" placeholder="Enter meter" oninput="toFoot(this.value)" onchange="toFoot(this.value)">
+        <p id="mtof"></p>
+    </table>
+</body>
+</html>
+<script>
+    function toMeter(foot) {
+        foot =parseFloat(foot);
+        document.getElementById("ftom").innerHTML = 0.325*foot;
+    }
+    function toFoot(meter) {
+        meter =parseFloat(meter);
+        document.getElementById("mtof").innerHTML = 3.279*meter;
+    }
+</script>

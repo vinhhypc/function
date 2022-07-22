@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html> 
+<script>
+    function Min(a,b,c) {
+        let min = a;
+        if (a >b) {
+            min =b;
+            if ( b>c) {
+                min =c;
+            }else{
+                min =b;
+            }
+        } else {
+            if (a>c) {
+                min =c;
+            }else{
+                min =a;
+            }
+        }
+     return min;
+    }
+    let a = + prompt("Nhap a");
+    let b = + prompt("Nhap b");
+    let c = + prompt("Nhap c");
+    let result = Min(a,b,c);
+    document.write(result);
+</script>

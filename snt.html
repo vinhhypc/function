@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function Check(num){
+        let result = "";
+        if (num <2){
+            result = "Ko la so nt";
+        } else if (num == 2){
+            result = " La so nguyen to";
+        } else {
+            let count =0;
+            for ( let i = 1; i <= num; i++){
+                if (num % i == 0){
+                    count++;
+                }
+            }
+            if (count ==2) {
+                result = " La so nguyen to2";
+            }else{
+                result = "Ko la so nt";
+            }
+        }
+    return result;
+    }
+    let a = Check(13);
+    console.log(a)
+</script>
